@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site Vivo com IA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Meu Site Inteligente</h1>
+        <p>Peça para a IA alterar a página, criar jogos ou gerar arquivos!</p>
+    </header>
+
+    <main class="container">
+        
+        <section id="dynamic-area" class="dynamic-area">
+            <div class="card-boas-vindas">
+                <h2>Área Dinâmica do Site</h2>
+                <p>Os novos componentes que você pedir para a IA vão aparecer neste espaço.</p>
+            </div>
+        </section>
+
+        <section class="chat-container">
+            <div id="chat-messages" class="chat-messages">
+                <div class="message system-message">
+                    <strong>IA:</strong> Olá! O que vamos criar ou alterar no site hoje?
+                </div>
+            </div>
+
+            <form id="chat-form" class="chat-input-area">
+                <input 
+                    type="text" 
+                    id="user-input" 
+                    placeholder="Digite seu pedido (ex: crie um botão verde)..." 
+                    required 
+                    autocomplete="off"
+                >
+                <button type="submit" id="send-btn">Enviar</button>
+            </form>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
