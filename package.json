@@ -1,0 +1,12 @@
+{
+  "name": "meu-site-vivo-ia",
+  "version": "1.0.0",
+  "description": "Site dinâmico com chat do Gemini integrado na Vercel",
+  "main": "api/chat.js",
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
