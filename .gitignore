@@ -1,0 +1,13 @@
+# Pastas de dependências do Node.js (a Vercel baixa isso sozinha, não precisa subir)
+node_modules/
+
+# Arquivos com chaves secretas e variáveis de ambiente (NUNCA envie para o GitHub)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Arquivos de sistema (Mac/Windows)
+.DS_Store
+Thumbs.db
