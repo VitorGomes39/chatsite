@@ -1,6 +1,6 @@
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 
-// Inicia o Gemini usando a variável de ambiente secreta que você vai configurar na Vercel
+// Inicia o Gemini usando a variável de ambiente secreta configurada na Vercel
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 module.exports = async function handler(req, res) {
@@ -17,7 +17,7 @@ module.exports = async function handler(req, res) {
             return res.status(400).json({ error: 'A mensagem está vazia.' });
         }
 
-        // Configura o modelo que vamos usar (O 1.5 Flash é rápido e excelente para isso)
+        // Configura o modelo que vamos usar
         const model = genAI.getGenerativeModel({
             model: 'gemini-1.5-flash',
             systemInstruction: `Você é uma IA assistente criadora de sites. O usuário vai pedir para você alterar a página, criar jogos ou conversar.
@@ -41,7 +41,7 @@ module.exports = async function handler(req, res) {
             const cleanText = responseText.replace(/```json/g, '').replace(/```/g, '').trim();
             parsedData = JSON.parse(cleanText);
         } catch (parseError) {
-            // Se a IA se confundir e não gerar um JSON perfeito, mandamos como texto normal para não quebrar o site
+            // Se a IA se confundir e não gerar um JSON perfeito, mandamos como texto normal
             parsedData = {
                 reply: responseText,
                 htmlCode: null,
